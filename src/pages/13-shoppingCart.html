@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --white: #FFFFFF;
+          --black: #000000;
+          --very-light-pink: #C7C7C7;
+          --text-input-field: #F7F7F7;
+          --hospital-green: #ACD9B2;
+          --dark: #232830;
+          --sm: 14px;
+          --md: 16px;
+          --lg: 18px;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        body {
+          margin: 0;
+          font-family: 'Quicksand', sans-serif;
+        }
+        .product-detail{
+            position: absolute;
+            right: 0;
+            width: 360px;
+            height: 100%;
+            padding: 24px;
+        }
+        .title-container{
+            display: flex;
+        }
+        .title-container img{
+            transform: rotate(180deg);
+        }
+        .title{
+            font-weight: bold;
+            font-size: var(--lg);
+            margin-left: 14px;
+        }
+        .primary-button{
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .shopping-cart{
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 16px;
+            margin-bottom: 16px;
+            align-items: center;
+        }
+        .shopping-cart figure{
+            margin: 0px;
+        }
+        .shopping-cart figure img{
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .shopping-cart p:nth-child(2){
+            color: var(--dark);
+        }
+        .shopping-cart p:nth-child(3){
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .my-order-content{
+            display: flex;
+            flex-direction: column;
+        }
+        .order{
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--text-input-field);
+            border-radius: 12px;
+            padding: 8px 15px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        .order p:first-child{
+            display: flex;
+            flex-direction: column;
+        }
+        .order p:first-child > span:first-child{
+            font-weight: bold;
+        }
+        .order p:nth-child(2){
+            color: var(--dark);
+            font-weight: bold;
+        }
+        @media (max-width: 640px){
+            .product-detail{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="product-detail">
+
+        <div class="title-container">
+            <img src="./Assets/icons/flechita.svg" alt="arrow">
+            <p class="title">Shopping cart</p>
+        </div>
+        
+        <div class="shopping-cart">
+            <figure>
+                <img src="https://images.pexels.com/photos/2481177/pexels-photo-2481177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Setup product image">
+            </figure>
+            <p>Setup</p>
+            <p>$120.00</p>
+            <img src="./Assets/icons/icon_close.png" alt="Shopping cart close icon">
+        </div>
+        
+        <div class="shopping-cart">
+            <figure>
+                <img src="https://images.pexels.com/photos/2481177/pexels-photo-2481177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Setup product image">
+            </figure>
+            <p>Setup</p>
+            <p>$120.00</p>
+            <img src="./Assets/icons/icon_close.png" alt="Shopping cart close icon">
+        </div>
+
+        <div class="shopping-cart">
+            <figure>
+                <img src="https://images.pexels.com/photos/2481177/pexels-photo-2481177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Setup product image">
+            </figure>
+            <p>Setup</p>
+            <p>$120.00</p>
+            <img src="./Assets/icons/icon_close.png" alt="Shopping cart close icon">
+        </div>
+
+        <div class="shopping-cart">
+            <figure>
+                <img src="https://images.pexels.com/photos/2481177/pexels-photo-2481177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Setup product image">
+            </figure>
+            <p>Setup</p>
+            <p>$120.00</p>
+            <img src="./Assets/icons/icon_close.png" alt="Shopping cart close icon">
+        </div>
+
+        <div class="shopping-cart">
+            <figure>
+                <img src="https://images.pexels.com/photos/2481177/pexels-photo-2481177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Setup product image">
+            </figure>
+            <p>Setup</p>
+            <p>$120.00</p>
+            <img src="./Assets/icons/icon_close.png" alt="Shopping cart close icon">
+        </div>
+
+        <div class="shopping-cart">
+            <figure>
+                <img src="https://images.pexels.com/photos/2481177/pexels-photo-2481177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Setup product image">
+            </figure>
+            <p>Setup</p>
+            <p>$120.00</p>
+            <img src="./Assets/icons/icon_close.png" alt="Shopping cart close icon">
+        </div>
+        
+        <div class="my-order-content">
+            <div class="order">
+                <p>
+                    <span>Total</span>
+                </p>
+                <p> $720.00 </p>
+            </div>
+        </div>
+
+        <button class="primary-button">Checkout</button>
+
+    </aside>
+</body>
+</html>

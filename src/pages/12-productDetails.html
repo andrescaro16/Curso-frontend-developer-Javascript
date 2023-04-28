@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --white: #FFFFFF;
+          --black: #000000;
+          --very-light-pink: #C7C7C7;
+          --text-input-field: #F7F7F7;
+          --hospital-green: #ACD9B2;
+          --dark: #232830;
+          --sm: 14px;
+          --md: 16px;
+          --lg: 18px;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        body {
+          margin: 0;
+          font-family: 'Quicksand', sans-serif;
+        }
+        .product-detail{
+            position: absolute;
+            right: 0;
+            width: 360px;
+            height: 100%;
+            padding-bottom: 24px;
+        }
+        .product-detail-close{
+            background-color: var(--white);
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2;
+            padding: 5px;
+            border-radius: 50%;
+        }
+        .product-detail-close:hover{
+            cursor: pointer;
+        }
+        .product-detail > img:nth-child(2){
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 0 0 20px 20px;
+        }
+        .product-info{
+            margin: 24px 24px 0 24px;
+            text-align: justify;
+        }
+        .product-info p:nth-child(1){
+            font-weight: bold;
+            color: var(--dark);
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+        .product-info p:nth-child(2){
+            color: var(--dark);
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 28px;
+        }
+        .product-info p:nth-child(3){
+            color: var(--dark);
+            font-size: var(--sm);
+            margin-top: 0;
+            margin-bottom: 28px;
+        }
+        .primary-button{
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .add-to-cart-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 640px){
+            .product-detail{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="product-detail">
+        
+        <div class="product-detail-close">
+            <img src="./Assets/icons/icon_close.png" alt="close">
+        </div>
+        <img src="https://images.pexels.com/photos/2481177/pexels-photo-2481177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="product image">
+
+        <div class="product-info">
+            <p>$120.00</p>
+            <p>Setup</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique quia quam illum ullam nam. Magnam soluta, quae repellendus voluptas placeat a dignissimos earum incidunt nemo, minima, atque esse ipsam. Eum?</p>
+            <button class="primary-button add-to-cart-button">
+                <img src="./Assets/icons/bt_add_to_cart.svg" alt="Add to cart icon">
+                Add to cart
+            </button>
+        </div>
+
+    </aside>
+</body>
+</html>
