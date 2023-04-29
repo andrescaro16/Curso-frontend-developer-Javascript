@@ -21,6 +21,18 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+.primary-button{
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+
 .inactive{
     display: none   !important;
 }
@@ -69,10 +81,12 @@ nav{
 
 .menu{
     display: none;
+    cursor: pointer;
 }
 
 .logo{
     width: 130px;
+    cursor: pointer;
 }
 
 nav ul{
@@ -95,6 +109,7 @@ nav ul{
 
 .navbar-shopping-cart{
     position: relative;
+    cursor: pointer;
 }
 
 .navbar-shopping-cart div{
@@ -160,6 +175,7 @@ nav ul{
 
 /*-----------------------------------------------[mobile-menu]------------------------------------------------*/
 .mobile-menu {
+    background-color: var(--white);
     position: absolute;
     top: 60px;
     left: 50%;
@@ -176,7 +192,6 @@ nav ul{
 .mobile-menu ul:last-child{
     position: absolute;
     bottom: 0;
-    
 }
 
 .mobile-menu a {
@@ -212,9 +227,90 @@ nav ul{
     color: var(--hospital-green);
 }
 
-/*------------------------------------------------[media-querys]----------------------------------------------*/
 
-/*---------------------------------------------------[navbar]-------------------------------------------------*/
+/*-----------------------------------------------[shoppingCart - product-detail]----------------------------------------------*/
+.product-detail{
+    background-color: var(--white);
+    position: absolute;
+    right: 0;
+    width: 300px;
+    height: 90%;
+    padding: 0 24px;
+}
+
+.title-container{
+    display: flex;
+}
+
+.title-container img{
+    transform: rotate(180deg);
+}
+
+.title{
+    font-weight: bold;
+    font-size: var(--lg);
+    margin-left: 14px;
+    margin-bottom: 24px;
+}
+
+.shopping-cart{
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: center;
+}
+
+.shopping-cart figure{
+    margin: 0px;
+}
+
+.shopping-cart figure img{
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.shopping-cart p:nth-child(2){
+    color: var(--dark);
+}
+
+.shopping-cart p:nth-child(3){
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+.my-order-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.order{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--text-input-field);
+    border-radius: 12px;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.order p:first-child{
+    display: flex;
+    flex-direction: column;
+}
+
+.order p:first-child > span:first-child{
+    font-weight: bold;
+}
+
+.order p:nth-child(2){
+    color: var(--dark);
+    font-weight: bold;
+}
+
+/*------------------------------------------------[media-querys]----------------------------------------------*/
 @media (max-width: 640px){
     .menu{
         display: block;
@@ -227,6 +323,9 @@ nav ul{
     }
     .desktop-menu{
         display: none;
+    }
+    .product-detail{
+        width: 100%;
     }
 }
 
