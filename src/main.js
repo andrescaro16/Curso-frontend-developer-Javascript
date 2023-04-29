@@ -3,7 +3,7 @@ let desktopMenu = document.querySelector(".desktop-menu");
 let hambMobileMenu = document.querySelector(".menu");
 let mobileMenu = document.querySelector(".mobile-menu");
 let cartIcon = document.querySelector(".navbar-shopping-cart");
-let cart = document.querySelector(".product-detail");
+let shoppingCartContainer = document.querySelector("#shoppingCartContainer");
 let productsContainer = document.querySelector(".cards-container");
 
 email.addEventListener("click", toggleDesktopMenu);
@@ -89,15 +89,15 @@ productList.push({
 
 
 function toggleDesktopMenu(){
-    if(!cart.classList.contains("inactive")){
-        cart.classList.add("inactive");
+    if(!shoppingCartContainer.classList.contains("inactive")){
+        shoppingCartContainer.classList.add("inactive");
     }
     desktopMenu.classList.toggle("inactive");
 }
 
 function toggleMobileMenu(){
-    if(!cart.classList.contains("inactive")){
-        cart.classList.add("inactive");
+    if(!shoppingCartContainer.classList.contains("inactive")){
+        shoppingCartContainer.classList.add("inactive");
     }
     mobileMenu.classList.toggle("inactive");
 }
@@ -108,7 +108,7 @@ function toggleCart(){
     }else if(!mobileMenu.classList.contains("inactive")){
         mobileMenu.classList.toggle("inactive");
     }
-    cart.classList.toggle("inactive");
+    shoppingCartContainer.classList.toggle("inactive");
 }
 
 function renderProducts(arr){
